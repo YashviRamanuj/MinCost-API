@@ -63,4 +63,4 @@ def MinCost(request):
     item_serializer.is_valid(raise_exception=True)
     arr = item_serializer.data['order']   # var 'arr' is list of quantity for the order
     cost = mincost(arr)
-    return Response({"Minimum cost for the given order is": cost})
+    return Response({"Your order is": arr, "Minimum cost for the given order is": cost})
